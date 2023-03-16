@@ -3,6 +3,8 @@ import 'dart:developer';
 
 import 'package:bloc/bloc.dart';
 import 'package:flutter/widgets.dart';
+import 'package:notimee_flutter_todos/app/app.dart';
+import 'package:todos_repository/todos_repository.dart';
 
 class AppBlocObserver extends BlocObserver {
   const AppBlocObserver();
@@ -20,15 +22,17 @@ class AppBlocObserver extends BlocObserver {
   }
 }
 
-Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
+void bootstrap({required TodosApi todosApi}) {
   FlutterError.onError = (details) {
     log(details.exceptionAsString(), stackTrace: details.stack);
   };
 
   Bloc.observer = const AppBlocObserver();
 
-  await runZonedGuarded(
-    () async => runApp(await builder()),
+  final todosRepository = TodosRepository(todosApi: todosApi);
+
+  runZonedGuarded(
+    () => runApp(App(todosRepository: todosRepository)),
     (error, stackTrace) => log(error.toString(), stackTrace: stackTrace),
   );
 }

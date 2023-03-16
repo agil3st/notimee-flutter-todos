@@ -3,5 +3,34 @@
     "counterAppBarTitle": "Counter",
     "@counterAppBarTitle": {
         "description": "Text shown in the AppBar of the Counter Page"
-    }
+    },
+    "todosOverviewAppBarTitle": "Overview",
+    "todosOverviewErrorSnackbarText": "Overview Error",
+    "todosOverviewUndoDeletionButtonText": "Undo Delete",
+    "todosOverviewEmptyText": "Overview Empty",
+    "todosOverviewTodoDeletedSnackbarText": "{title}",
+    "@todosOverviewTodoDeletedSnackbarText": {
+        "description": "Delete Todo Snackbar",
+        "placeholders": {
+            "title": {
+                "type": "String",
+                "example": "Bob"
+            }
+        }
+    },
+    "todosOverviewFilterAll": "All",
+    "todosOverviewFilterActiveOnly": "Active Only",
+    "todosOverviewFilterCompletedOnly": "Complete Only",
+    "todosOverviewOptionsMarkAllIncomplete": "Mark All As Complete",
+    "todosOverviewOptionsMarkAllComplete": "Mark All As Incomplete",
+    "todosOverviewOptionsClearCompleted": "Clear Completed",
+    "todosOverviewOptionsTooltip": "Options",
+    "statsAppBarTitle": "Todo Stats",
+    "statsCompletedTodoCountLabel": "Completed",
+    "statsActiveTodoCountLabel": "Active",
+    "editTodoAddAppBarTitle": "Add Todo",
+    "editTodoEditAppBarTitle": "Edit Todo",
+    "editTodoSaveButtonTooltip": "Save Todo",
+    "editTodoTitleLabel": "Todo",
+    "editTodoDescriptionLabel": "My Todo"
 }
